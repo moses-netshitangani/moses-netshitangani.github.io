@@ -4,11 +4,11 @@ let lat, longi;
 // Obtaining user location using their public IP address
 let loc = () => {
     let location_heading = document.getElementById("location");
-    let apikey = "at_zAnO9POHbSZ0131bwimuwllUv9Mm4";
+    let apikey = "bgvcJc303DUQ1oR3frh7W9GiW9ZKlb7C";
 
-    fetch(`https://geo.ipify.org/api/v1?apiKey=${apikey}`)
-    .then(response => response = response.json())
-    .then(response => location_heading.innerHTML = `${response.location.region}, ${response.location.city}`)
+    fetch("http://ip-api.com/json/")
+    .then(response => response.json())
+    .then(response => location_heading.innerHTML = `${response.regionName}, ${response.city}`)
     .catch(err => console.log(err));
 }
 // Update the DOM
@@ -38,5 +38,5 @@ let obtain = () => {
     });
 }
 
-loc();
 obtain();
+loc();

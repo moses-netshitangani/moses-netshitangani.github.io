@@ -9,7 +9,7 @@
 body{
     height: 100vh;
     font-size: 1em;
-    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    background-image: linear-gradient(to left, #eb3349 0%, #f45c43 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ body{
 /* Desktop optimization */
 @media screen and(min-width: 1000px){
     body{
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
 
     .heading{
