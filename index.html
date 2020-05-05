@@ -1,27 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Moses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Weather App</title>
-</head>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<body>
-    <div class="heading">
-        <h1>Today's Weather</h1>
-    </div>    
-    <div class="forecast">
-        <h1 id="location"></h1>
-        <div class="temp-display">
-            <h1 id="temp"></h1>
-            <sup>o</sup>
-            <h1>C</h1>
+  <body>
+
+    <div class="home-bg">
+      <div class="nav">
+          <a href="#home" id="homeNav" onclick="goHome()">Home</a>
+          <a href="#resume" id="resumeNav" onclick="goResume()">Resume</a>
+          <a href="#projects" id="projectsNav" onclick="goProjects()">Projects</a>
+          <a href="#contact" id="contactNav" onclick="goContact()">Contact</a>
+      </div>
+
+      <!-- Beginning of the Home page -->
+      <div class="home-about">
+        <div class="home-avatar">
+          <div class="avatar-border">
+          </div>
         </div>
-        <h2 id="type"></h2>
-    </div>
-    
-    <script src="scripts/weather.js"> </script>
-</body>
+        <div class="home-headings">
+          <h1>Hello, I am <span>Moses</span></h1>
+          <h1>Software and Web Developer</h1>
+        </div>
+        <div id="home" class="home-info">
+          <p>I am a motivated software and web developer, in my final year
+             of study at the University of Cape Town. Solving real-world
+             problems using my knowledge and skills in computer sciences is
+             one of the things I enjoy the most. I am familiar with Java,
+             Python, Javascript, front-end web development
+             technologies and database design and manipulation using MySQL.
+          </p>
+        </div>
+      </div>
+      <!-- End of the Home page -->
 
+      <!-- Beginning of the Resume section -->
+      <div id="resume" class="Resume">
+        <div class="college">
+          <h2>University of Cape Town (UCT)</h2>
+          <h3>BSc in Computer Sciences & Applied Statistics (2018-2020)</h2>
+          <div class="years">
+            <h3>2020:</h3>
+            <p>UCT mentor for first year computer science students.</p>
+            <h3>2019:</h3>
+            <p>Member of the Golden Key International Honour Society, UCT:
+              membership restricted to top 15% students in their courses,
+              connects high-achieving students on a global scale.
+            </p>
+            <p>
+              Warden’s Award for ‘A First’, Smuts Hall, UCT: awarded to
+              2<sup>nd</sup> year students who obtained a GPA above 75.
+            </p>
+            <p>
+              Dean's Merit List (2019)
+            </p>
+            <p>
+              Orientation-Week sub-committee leader, Smuts Hall res, UCT.
+            </p>
+            <h3>2018:</h3>
+            <p>
+              Dean's Merit List (2018)
+            </p>
+            <p>
+              Smuts Hall soccer team-member
+            </p>
+          </div>
+        </div>
+        <div class="high-school">
+            <h2>Progress High School (2013-2017)</h2>
+            <h3>2018:</h3>
+            <p>
+                Provincial award for top 5 student in Gauteng SSIP schools.
+            </p>
+            <h3>2017:</h3>
+            <p>
+                Matriculated with all A's, top student in school.
+            </p>
+            <h3>2016:</h3>
+            <p>
+                Best student in the Sciences stream.
+            </p>
+        </div>
+        <div class="work-experience">
+            <h2>Work Experience</h2>
+            <h3>2020:</h3>
+            <p>
+                Computer Sciences (CSC2001F) & Statistics (STA2020F) tutor for
+                2<sup>nd</sup> years', UCT. Work also included conducting lab sessions,
+                assistance with R-Studio, and providing consultation.
+            </p>
+            <h3>2019:</h3>
+            <p>
+                Computer Sciences (CSC1015F & CSC1016S) tutor for first years’,
+                UCT.
+            </p>
+        </div>
+        <div class="button">
+            <a href="documents/CV.pdf">
+                <img src="icons/download.png" alt="download icon"> Resume
+            </a>
+        </div>
+      </div>
+      <!-- End of the Resume section -->
+
+      <!-- Beginning of the Projects section -->
+      <div id="projects" class="Projects">
+        <a href="https://github.com/moses-netshitangani/To-Do-App">
+          <div class="proj1">
+            <h2>To-do (Reminder) web app</h2>
+            <p>
+                Where would we be without constant reminders of the 
+                important tasks we need to do? This simple web app 
+                does just that, it offers you a 'platform' where 
+                you can type in your reminders, most especially if 
+                you're surfing the web, so that you don't have to 
+                resort to opening the actual app on your mobile.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://github.com/moses-netshitangani/Weather-App">
+          <div class="proj2">
+            <h2>Weather App</h2>
+            <p>
+              Uses data from a weather API to give the weather 
+              forecast based on the user's geographic coordinates. 
+              Of course the user is asked for permission to use 
+              their location first.  
+            </p>
+          </div>
+        </a>
+
+        <a href="https://github.com/moses-netshitangani/Online-Stopwatch">
+            <div class="proj3">
+                <h2>Digital clock & Stopwatch</h2>
+                <p>
+                    Saw that invigilators use either a clock or a 
+                    stopwatch to gauge the time. So, I built a web 
+                    app that displays the time AND has a stopwatch 
+                    functionality. 2 birds with 1 code. My next 
+                    project might be a pun app - listing all the bad 
+                    puns I've come up with.
+                </p>
+            </div>
+        </a>
+        
+        <a href="https://github.com/moses-netshitangani/Basic-Online-Calculator">
+            <div class="proj4">
+                <h2>Basic Calculator</h2>
+                <p>
+                    Well, I just had to. Every single programmer 
+                    has a calculator as one of their projects. Did 
+                    this one for the culture. It actually comes in 
+                    handy when working with large numbers (an Iphone 
+                    calculator doesn't allow you type in a number 
+                    greater than a billion). And it looks nice as 
+                    well.
+                </p>
+            </div>
+        </a>
+      </div>
+      <!-- End of the Projects section -->
+
+      <!-- Beginning of  Contact section-->
+      <div class="Contact" id="contact">
+        <div class="platform">
+            <a href="mailto:netshitanganimoses@gmail.com" class="icon Mail">
+                <img src="icons/mail.png">
+            </a>
+            <p>Send me an email</p>
+        </div>
+
+        <div class="platform">
+            <a href="https://www.linkedin.com/in/moses-netshitangani-2b396417b" class="icon LinkedIn">
+                <img src="icons/linkedin.png">
+            </a>
+            <p>View my LinkedIn profile</p>
+        </div>
+
+        <div class="platform">
+            <a href="https://github.com/moses-netshitangani" class="icon GitHub">
+                <img src="icons/github.png">
+            </a>
+            <p>View my projects on GitHub</p>
+        </div>
+      </div>
+      <!-- End of the Contact section -->
+      
+    </div>
+
+    <script src="scripts/script.js"></script>
+
+  </body>
 </html>
