@@ -10,7 +10,7 @@ let change = (t,w,d) => {
     t = t - 273.15;
     t = Math.round(t);
     temp_heading.innerHTML = t;
-    type_heading.innerHTML = w[0].description;
+    type_heading.innerHTML = w[0].main;
     console.log(d);
 }
 
@@ -19,7 +19,7 @@ let obtain = () => {
     navigator.geolocation.getCurrentPosition(position => {
         lat = position.coords.latitude;
         longi = position.coords.longitude;
-        // alert(`lat: ${lat}, long: ${longi}`);
+        alert(`lat: ${lat}, long: ${longi}`);
         lat = lat.toFixed(4);
         longi = longi.toFixed(4);
         
