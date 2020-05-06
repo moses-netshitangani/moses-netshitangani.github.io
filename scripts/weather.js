@@ -6,7 +6,17 @@ let loc = () => {
     .then(data => data = data.json())
     .then(data => {
         location_heading = document.getElementById("location");
-        location_heading.innerHTML = `${data.address.state}, ${data.address.town}`;
+        city = data.address.city;
+        town = data.address.town;
+        second_value = ""
+        if(city != undefined)
+        {
+            second_value = city;
+        }else{
+            second_value = town;
+        }
+        state = data.address.state;
+        location_heading.innerHTML = `${state}, ${second_value}`;
     })
     .catch(err => console.log(err));
 }
