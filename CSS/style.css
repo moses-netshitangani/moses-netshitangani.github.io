@@ -9,7 +9,7 @@
 body{
     height: 100vh;
     font-size: 1em;
-    background-image: linear-gradient(to left, #eb3349 0%, #f45c43 100%);
+    background: linear-gradient(#de6262, #ffb88c);
     display: flex;
     justify-content: center;
     align-items: center;
