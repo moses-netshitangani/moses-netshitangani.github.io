@@ -6,7 +6,7 @@ let loc = () => {
     .then(data => data = data.json())
     .then(data => {
         location_heading = document.getElementById("location");
-        location_heading.innerHTML = `${data.address.suburb}, ${data.address.town}`;
+        location_heading.innerHTML = `${data.address.state}, ${data.address.town}`;
     })
     .catch(err => console.log(err));
 }
