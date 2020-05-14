@@ -1,19 +1,30 @@
 // Coordinates
 let lat, longi;
 
+// DOM elements
+let temp_heading = document.getElementById("temp");
+let type_heading = document.getElementById("type");
+let degree_display = document.getElementById("degrees");
+let temperature = 0;
+
 let loc = () => {
     fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${longi}&zoom=18&addressdetails=1`)
     .then(data => data = data.json())
     .then(data => {
         location_heading = document.getElementById("location");
+        suburb = data.address.suburb;
         city = data.address.city;
         town = data.address.town;
         second_value = ""
         if(city != undefined)
         {
             second_value = city;
-        }else{
+        }else if(town != undefined)
+        {
             second_value = town;
+        }
+        else{
+            second_value = suburb;
         }
         state = data.address.state;
         location_heading.innerHTML = `${state}, ${second_value}`;
@@ -23,15 +34,24 @@ let loc = () => {
 
 // Update the DOM
 let change = (t,w) => {
-    temp_heading = document.getElementById("temp");
-    type_heading = document.getElementById("type");
-    
-    t = t - 273.15;
-    t = Math.round(t);
-    temp_heading.innerHTML = t;
+    temperature = t;
+    temperature = Math.round(temperature - 273.15);
+    temp_heading.innerHTML = temperature;
     type_heading.innerHTML = w[0].main;
 }
 
+// Switching between Fahrenheit and degrees Celsius
+let degrees = () => {
+    if(degree_display.innerHTML == "C"){
+        temperature_f = temperature*(9/5)+32;
+        temp_heading.innerHTML = temperature_f.toFixed(1);
+        degree_display.innerHTML = "F";
+    }
+    else{
+        temp_heading.innerHTML = temperature;
+        degree_display.innerHTML = "C";
+    }
+}
 // Retrieve user coordinates
 let obtain = () => {
     navigator.geolocation.getCurrentPosition(position => {
