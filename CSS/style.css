@@ -23,13 +23,11 @@ p{
 .info div:first-child{
     border-top: 2px solid white;
     border-left: 2px solid white;
-    border-radius: 10px;
 }
 
 .info div:last-child{
     border-bottom: 2px solid white;
     border-right: 2px solid white;
-    border-radius: 10px;
 }
 
 .heading{
