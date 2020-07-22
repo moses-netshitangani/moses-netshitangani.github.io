@@ -12,19 +12,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background: linear-gradient(to top, #ffb199 0%, #ff0844 100%);
 }
 
 p{
     margin: 2%;
-    border-left: 3px solid white;
+    border-left: 2px solid white;
+    text-justify: left;
 }
 
 .heading{
     position: absolute;
     top: 10%;
     width: 80%;
-    border-bottom: 3px solid white;
+    border-bottom: 7px solid white;
 }
 
 .info{
