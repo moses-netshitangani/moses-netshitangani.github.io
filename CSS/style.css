@@ -29,6 +29,7 @@ p{
 }
 
 .info{
+    margin-top: 20%;
     padding: 10%;
     display: flex;
     justify-content: space-between;
