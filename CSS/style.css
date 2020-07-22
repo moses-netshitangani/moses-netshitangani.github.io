@@ -15,6 +15,11 @@ body{
     background: linear-gradient(90deg, rgba(223,91,77,1) 0%, rgba(253,164,29,1) 50%, rgba(252,69,150,1) 100%);
 }
 
+p{
+    margin: 2%;
+    border-left: 3px solid white;
+}
+
 .heading{
     position: absolute;
     top: 10%;
@@ -24,6 +29,9 @@ body{
 
 .info{
     padding: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Desktop optimization */
