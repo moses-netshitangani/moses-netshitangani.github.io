@@ -17,8 +17,17 @@ body{
 
 p{
     margin: 2%;
+    text-align: left;
+}
+
+p:first-child{
+    border-top: 2px solid white;
     border-left: 2px solid white;
-    text-justify: left;
+}
+
+p:last-child{
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
 }
 
 .heading{
