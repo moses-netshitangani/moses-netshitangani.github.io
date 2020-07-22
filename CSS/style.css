@@ -20,12 +20,12 @@ p{
     text-align: left;
 }
 
-p:first-child{
+.info div:first-child{
     border-top: 2px solid white;
     border-left: 2px solid white;
 }
 
-p:last-child{
+.info div:last-child{
     border-bottom: 2px solid white;
     border-right: 2px solid white;
 }
@@ -39,7 +39,7 @@ p:last-child{
 
 .info{
     margin-top: 10%;
-    padding: 10%;
+    padding: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
