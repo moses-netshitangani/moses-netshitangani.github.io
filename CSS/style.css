@@ -13,31 +13,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.color-buttons{
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    width: 20%;
-    height: 2.5%;
-}
 
-button{
-    width: 50%;
-    border: 2px solid transparent;
-}
-
-#orange{
-    background: radial-gradient( circle farthest-corner at 45% 40%,  rgba(255,230,67,1) -70%, rgba(255,80,80,1) 90.2% );
-}
-#white{
-    background-color: white;
-    border: 2px solid grey;
-}
-#black{
-    background-color: black;
-}
 .heading{
     position: absolute;
     top: 10%;
@@ -45,14 +21,8 @@ button{
     border-bottom: 3px solid black;
 }
 
-.temp-display{
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-}
-
-#type{
-    text-transform: capitalize;
+.info{
+    padding: 10%;
 }
 
 /* Desktop optimization */
@@ -63,13 +33,5 @@ button{
 
     .heading{
         top: 5%;
-    }
-
-    .temp-display{
-        font-size: 2em;
-    }
-
-    .color-buttons{
-        width: 5%;
     }
 }
